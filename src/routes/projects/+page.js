@@ -8,6 +8,8 @@ export async function load({ fetch, params }) {
 
     return {
         page: await directus.request(readItem('pages', 'projects')),
-        pageData: await directus.request(readItems('projects')),
+        pageData: await directus.request(readItems('projects', {
+            fields: ['*', 'technologies.*.*'],
+        })),
     };
 }

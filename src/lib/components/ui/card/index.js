@@ -5,6 +5,7 @@ import Footer from "./card-footer.svelte";
 import Header from "./card-header.svelte";
 import Title from "./card-title.svelte";
 import Info from "./card-info.svelte";
+
 export {
 	Root,
 	Content,

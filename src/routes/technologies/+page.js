@@ -7,7 +7,10 @@ export async function load({ fetch, params }) {
     const directus = getDirectusInstance(fetch);
 
     return {
-        page: await directus.request(readItem('pages', 'stacks')),
-        pageData: await directus.request(readItems('about')),
+        page: await directus.request(readItem('pages', 'technologies')),
+        pageData: await directus.request(readItems('tech', {
+            fields: ['*', 'technologies.*.*'],
+            sort: 'order',
+        })),
     };
 }
