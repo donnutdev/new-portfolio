@@ -10,7 +10,6 @@ export async function load({ fetch, params }) {
         page: await directus.request(readItem('pages', 'technologies')),
         pageData: await directus.request(readItems('tech', {
             fields: ['*', 'technologies.*.*'],
-            sort: 'order',
         })),
     };
 }
