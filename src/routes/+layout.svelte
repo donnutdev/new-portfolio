@@ -46,7 +46,6 @@
     <title>{global.title}</title>
 </svelte:head>
 
-<ModeWatcher defaultTheme="dark"/>
 <nav class="text-white w-full transition-all duration-500 inline-flex justify-center p-4 fixed z-50" bind:this={navBar}>
     <div
             class="h-0.5 bg-gradient-to-r from-cyan-400 to-indigo-600 absolute top-0 left-0"
