@@ -4,7 +4,18 @@
     import { ModeWatcher } from "mode-watcher";
     import { afterNavigate, beforeNavigate } from "$app/navigation";
     import {tweened} from "svelte/motion";
-    
+    import Plausible from 'plausible-tracker';
+    import {PUBLIC_MAIN_URL, PUBLIC_PLAUSIBLE_URL} from "$env/static/public";
+    import {browser} from "$app/environment";
+
+    const plausible = browser ? Plausible({
+        domain: PUBLIC_MAIN_URL,
+        apiHost: PUBLIC_PLAUSIBLE_URL,
+        trackLocalhost: true,
+    }) : null;
+
+    plausible?.trackPageview();
+
     let { global } = data;
     
     let scrollY = $state(0);
