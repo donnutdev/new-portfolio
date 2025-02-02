@@ -108,17 +108,6 @@
                 </span>
             </a>
         </li>
-        <li>
-            <a href="/blog" class="group relative transition duration-300" data-sveltekit-preload-data>
-                <span class="group-hover:text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-600">
-                    Blog
-                </span>
-                <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-gradient-to-r from-cyan-400 to-indigo-600"></span>
-                <span class="absolute inset-0 opacity-0 group-hover:opacity-100 group-hover:blur transition duration-300 text-cyan-400 to-indigo-600 group-hover:animate-pulse">
-                    Blog
-                </span>
-            </a>
-        </li>
     </ul>
 </nav>
 
